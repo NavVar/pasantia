@@ -1,0 +1,28 @@
+<div class="container">
+	<h1 style="border-bottom: 1px solid #2D6F96; color: #2D6F96; padding-bottom:7px; text-align:center;">Actividad</h1>
+
+
+	<p>
+	  <strong>Titulo de la Actividad:</strong>
+	  <%= @actividad.tittle %>
+	</p>
+
+	<p>
+	  <strong>Descripción:</strong>
+	  <%= @actividad.description %>
+	</p>
+
+	<p>
+	  <strong>Fecha:</strong>
+	  <%= @actividad.at_date %>
+	</p>
+
+	<p>
+	  <strong>Lugar:</strong>
+	  <%= @actividad.place %>
+	</p>
+</div>
+<div class="btn btn-group">
+	<%= link_to 'Editar', edit_actividad_path(@actividad), class:"btn btn-primary"%> 
+	<%= link_to 'Volver', actividads_path, class:"btn btn-default" %>
+</div>

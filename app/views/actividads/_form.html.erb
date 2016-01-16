@@ -1,0 +1,41 @@
+<%= form_for(@actividad) do |f| %>
+<div class="row">
+    <div class="container-fluid">
+      <div class="col-xs-6">
+        <p class='text-muted'>
+          Rellene los siguientes campos con la información pertinente:<br>
+        </p>
+      </div>
+      <div class="col-xs-6">
+        <p class='text-muted' style="color:#D46A6A;" align="right">
+          <i><small>Los campos marcados con (*) son obligatorios.</small>
+          <br><br></i>
+        </p>
+      </div>
+    </div>
+    </div>
+ 
+
+  <div class="field">
+    <%= f.label :Titulo_de_la_actividad %>*<br>
+    <%= f.text_field :tittle , :size=>'90' %>
+  </div>
+  <div class="field">
+    <%= f.label :descripción %>*<br>
+    <%= f.text_area :description , :size=>'90x5' %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %>*<br>
+    <%= f.date_select :at_date,:default => Time.now ,:order => [:day,:month,:year]%>
+
+   
+  </div>
+  <div class="field">
+    <%= f.label :lugar %>*<br>
+    <%= f.text_field :place, :size=>'90' %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Guardar', :class => 'btn btn-sm btn-success'%>
+  </div>
+<% end %>
+  <%= link_to 'Volver', actividads_path, class:"btn btn-default" %>

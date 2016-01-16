@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<title>Hecho en Bolivia</title>
+	 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+	<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+  <%= csrf_meta_tags %>
+	<%= favicon_link_tag 'logo.png' %>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
+<body  style='background-color: #EDF8FF; margin-top:75px;' >
+
+
+		<nav class="navbar navbar-custom navbar-fixed-top">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="/"><p>Hecho en Bolivia</p></a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav">
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" in_tag="ul" kaspersky_status="skipped">Nosotros <span class="caret"></span></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="/contact_us" in_tag="ul" kaspersky_status="skipped">Contáctanos</a></li>
+		                <li><a href="/directorio" in_tag="ul" kaspersky_status="skipped">Directorio</a></li>
+		                <li><a href="/about_us" in_tag="ul" kaspersky_status="skipped">Quiénes somos</a></li>
+		                <li><a href="/videos" in_tag="ul" kaspersky_status="skipped">Videos</a></li>
+
+		              
+		              </ul>
+		            </li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" in_tag="ul" kaspersky_status="skipped">El país <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="http://pulso-economico.herokuapp.com/" in_tag="ul" kaspersky_status="skipped">Economía</a></li>
+										<li><a href="/turismo" in_tag="ul" kaspersky_status="skipped">Turismo</a></li>
+										<li><a href="/gastronomia" in_tag="ul" kaspersky_status="skipped">Gastronomía</a></li>
+									</ul>
+								</li>
+		              <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" in_tag="ul" kaspersky_status="skipped">Voluntariado <span class="caret"></span></a>
+
+		              <ul class="dropdown-menu">
+		              	<li><a href="" in_tag="ul" kaspersky_status="skipped">Sé voluntario</a></li>
+		           
+		             
+		              </ul>
+		            </li>
+		             <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" in_tag="ul" kaspersky_status="skipped">Actividades <span class="caret"></span></a>
+
+		              <ul class="dropdown-menu">
+		              	<li><a href="/actividads" in_tag="ul" kaspersky_status="skipped">Ver actividades</a></li>
+		              	<li><a href="/ferias" in_tag="ul" kaspersky_status="skipped">Ver ferias</a></li>
+		           
+		             
+		              </ul>
+		            </li>
+							</li>
+								
+		          </ul>
+							
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </nav>
+
+		<div class="container">
+
+
+		<%=yield%>
+
+		<br><br>
+
+		</div>
+
+		<footer id="ac-globalfooter" class="js no-touch svg no-ie7 no-ie8" lang="en-US" data-analytics-region="global footer" role="contentinfo" aria-labelledby="ac-gf-label">
+				<div class="ac-gf-content">
+
+					<nav class="ac-gf-directory with-5-columns" role="navigation">
+			<!--googleoff: all-->
+			<div class="ac-gf-directory-column">
+
+				<input class="ac-gf-directory-column-section-state" type="checkbox" id="ac-gf-directory-column-section-state-storeservices">
+				<div class="ac-gf-directory-column-section">
+					<label class="ac-gf-directory-column-section-label" for="ac-gf-directory-column-section-state-storeservices">
+						<h3 class="ac-gf-directory-column-section-title">Fundación Hecho en Bolivia</h3> </label>
+					<ul class="ac-gf-directory-column-section-list">
+						<li class="ac-gf-directory-column-section-item">
+								Calle Jordán # 522 Esq.<br>
+								San Martín Edif. Comboni,<br>
+								Center 5 Piso Of 505<br><br>
+							</li>
+						<li class="ac-gf-directory-column-section-item">
+							<label class="ac-gf-directory-column-section-label" for="ac-gf-directory-column-section-state-storeservices">
+								<h3 class="ac-gf-directory-column-section-title">Información:</h3> </label>
+							info@fundacionhechoenbolivia.org<br><br>
+						</li>
+						<img src="/assets/logo.png" width="55%">
+					</ul>
+				</div>
+			</div>
+			
+			
+			
+			
+			<!--googleon: all-->
+		</nav>
+
+		<section class="ac-gf-footer" vocab="http://schema.org/" typeof="Organization">
+			<div class="ac-gf-footer-legal">
+				<div class="ac-gf-footer-legal-copyright">Copyright © 2015 Fundación Hecho en Bolivia. Todos los derechos reservados.</div>
+			</div>
+
+		<script type="text/javascript" src="/ac/globalfooter/2.0/en_US/scripts/ac-globalfooter.built.js"></script>
+
+				</div>
+
+			</footer>
+			<footer id="ac-globalfooter" class="js no-touch svg no-ie7 no-ie8" lang="en-US" data-analytics-region="global footer" role="contentinfo" aria-labelledby="ac-gf-label" style="background-color:#000;">
+				<div class="ac-gf-content">
+
+				<section class="ac-gf-footer" vocab="http://schema.org/" typeof="Organization">
+
+				
+			</div>
+			</footer>
+
+	
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+</body>
+</html>
