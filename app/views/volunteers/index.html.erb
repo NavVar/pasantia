@@ -1,0 +1,40 @@
+<div class="container">
+<h1 style="border-bottom: 1px solid #2D6F96; color: #2D6F96; padding-bottom:7px;">Postulantes a Voluntarios</h1>
+
+<table class="table table-bordered table-striped">
+  <thead class="info">
+    <tr>
+      <th style="text-align:center;">Nombre</th>
+      <th style="text-align:center;">Apellido</th>
+      <th style="text-align:center;">Área</th>
+      
+      <th style="text-align:center;">Carrera</th>
+    
+      <th style="text-align:center;">Celular</th>
+      <th style="text-align:center;">Departmento</th>
+      <th colspan="2" style="text-align:center;">Opciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @volunteers.each do |volunteer| %>
+      <tr>
+        <td><%= volunteer.name %></td>
+        <td><%= volunteer.lastname %></td>
+        <td><%= volunteer.area %></td>
+       
+        <td><%= volunteer.carreer %></td>
+        
+        <td><%= volunteer.cellphone %></td>
+        <td><%= volunteer.department %></td>
+        
+        <td><%= link_to 'Editar', edit_volunteer_path(volunteer) %></td>
+        <td><%= link_to 'Borrar', volunteer, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+
