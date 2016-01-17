@@ -8,6 +8,7 @@ Rails.application.routes.draw do
    get '/ferias' => 'home#ferias'
    get '/turismo' => 'home#turismo'
    get '/videos' => 'home#videos'
+   get '/actividades' => 'actividads#actividades'
    get '/administrador' => 'home#administrador'
 
   # The priority is based upon order of creation: first created -> highest priority.
